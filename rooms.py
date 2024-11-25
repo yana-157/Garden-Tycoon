@@ -1,3 +1,12 @@
+class Game:
+	def __init__(self):
+		self.rooms = {}
+		self.currentRoom = None
+	def addRoom(self, room):
+		self.rooms[room.name] = room
+	def switchRoom(self, roomName)
+		if roomName in self.rooms
+
 class Rooms:
 	def __init__(self, name):
 		self.name = name
