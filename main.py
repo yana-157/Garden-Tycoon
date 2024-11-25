@@ -1,7 +1,21 @@
-install cmu_graphics
 from cmu_graphics import *
+from room import Store
+from room import Rooms
+
 def onAppStart(app):
-	app.width = 800
-	app.height = 600
+    app.store = Store()
+    app.height = 600
+    app.width = 800
+    app.Room.currentRoom = 'lobby'
+    app.playerLevel = 0
+    lobby = Room("Lobby")
+
+
 def redrawAll(app):
-  drawLabel("Garden Tycoon", app.width / 2, app.height / 2, size=30, fill="blue")
+    app.Room.currentRoom
+    drawImage(app.url, )
+
+def onMousePress(app, mouseX, mouseY):
+    app.store.currentRoom.handleClick("object", app.playerLevel)
+
+runApp()
