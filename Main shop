@@ -3,9 +3,9 @@ from cmu_graphics import *
 class Rooms:
 	def __init__(self, name):
 		self.name = name
-		    self.objects = []
-		    self.objectRoles = dict()
-		    self.playerLevel = playerLevel
+			self.objects = []
+			self.objectRoles = dict()
+			self.playerLevel = playerLevel
 	def addObject(self, obj, action=None, requiredLevel=0):
 		self.objectRoles[obj] = (action, requiredLevel)
 	def handleClick(self, obj):
