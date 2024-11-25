@@ -1,27 +1,25 @@
-class Game:
+class Store:
 	def __init__(self):
-		self.rooms = {}
+		self.rooms = dict()
 		self.currentRoom = None
 	def addRoom(self, room):
 		self.rooms[room.name] = room
-	def switchRoom(self, roomName)
-		if roomName in self.rooms
+	def switchRoom(self, roomName):
+		if roomName in self.rooms:
+			self.currentRoom = roomName
+	def draw(self):
+		self.currentRoom.draw()
 
-class Rooms:
-	def __init__(self, name):
+class Room:
+	def __init__(self, name)
 		self.name = name
-			self.objects = []
-			self.objectRoles = dict()
-			self.playerLevel = playerLevel
+		self.objectRoles = {}
+		self.app = app
 	def addObject(self, obj, action=None, requiredLevel=0):
 		self.objectRoles[obj] = (action, requiredLevel)
-	def handleClick(self, obj):
-		if obj in self.objectRoles:
-			action, requiredLevel = self.objectRoles[obj]
-				if self.playerLevel >= requiredLevel:
-					action()
-				else:
-					print 'f{action} is locked. Reach {requiredLevel} to unlock this feature!}
-
-						
-
+	def handleClick(self, obj, playerLevel):
+		action, requiredLevel = self.objectRoles[obj]
+		if playerLevel >= requiredLevel:
+			action()
+		else:
+			print ('f{action} is locked. Reach {requiredLevel} to unlock!')
