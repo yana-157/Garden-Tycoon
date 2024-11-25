@@ -1,8 +1,3 @@
-pip install cmu-graphics
-from cmu_graphics import *
-def onAppStart(app):
-	app.width = 800
-	app.height = 600
 class Rooms:
 	def __init__(self, name):
 		self.name = name
